@@ -1,7 +1,8 @@
 <?php
 
 $post = $_POST;
-if (isset($post['contact_name']) && $post['contact_email'] && isset($post['contact_subject']) && $post['contact_message']) {
+
+if (isset($post['purveyor_Fname']) && $post['purveyor_Fname'] && isset($post['purveyor_Email']) && $post['purveyor_Email']) {
     $message = '<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="background-color: #F4F4F4; border-bottom: 1px solid #CCCCCC;"> 
 <tr> <td align="center" valign="top" style="background-color: #F4F4F4; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #CCCCCC;"> 
 <table border="0" cellpadding="0" cellspacing="0" style="border: 1px solid #BBBBBB; width: 600px;"> 
@@ -15,14 +16,21 @@ if (isset($post['contact_name']) && $post['contact_email'] && isset($post['conta
 </table> </td></tr>
 <tr> <td align="center" valign="top"> 
 <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-bottom:20px; background-color:#ffffff;border-top:1px solid #FFF;border-bottom:1px solid #CCC"> 
-<tr> <td valign="top" class="bodyContent" style="padding-left:20px;" mc:edit="body_content"> <h1>Contact Enquiry</h1> </td></tr>
+<tr> <td valign="top" class="bodyContent" style="padding-left:20px;" mc:edit="body_content"> <h1>Enquiry</h1> </td></tr>
 <tr><td style="width:100%; padding:10px 20px 40px">
 <table cellpadding="10" cellspacing="0" width="100%" style="border:1px solid #ccc;line-height:24px; font-size:16px; font-family: Helvetica;">
-<tr><td width="30%" bgcolor="#ebebeb">Name: </td><td bgcolor="#f6f6f6">' . $post['contact_name'] . '</td></tr>
-<tr><td bgcolor="#ebebeb">Email Id: </td><td bgcolor="#f6f6f6">' . $post['contact_email'] . '</td></tr>
-<tr><td bgcolor="#f8f8f8">Subject: </td><td bgcolor="#fff">' . $post['contact_subject'] . '</td></tr>
-<tr><td bgcolor="#ebebeb">Message: </td><td bgcolor="#f6f6f6">' . $post['contact_message'] . '</td></tr>
-
+<tr><td width="30%" bgcolor="#ebebeb">First Name: </td><td bgcolor="#f6f6f6">' . $post['purveyor_Fname'] . '</td></tr>
+<tr><td bgcolor="#f8f8f8">Last Name: </td><td bgcolor="#fff">' . $post['purveyor_Lname'] . '</td></tr>
+<tr><td bgcolor="#ebebeb">Email Id: </td><td bgcolor="#f6f6f6">' . $post['purveyor_Email'] . '</td></tr>
+<tr><td bgcolor="#f8f8f8">Business Name: </td><td bgcolor="#fff">' . $post['purveyor_Businessname'] . '</td></tr>
+<tr><td bgcolor="#ebebeb">Signature Dish: </td><td bgcolor="#f6f6f6">' . $post['purveyor_Dish'] . '</td></tr>
+<tr><td bgcolor="#f8f8f8">Biography: </td><td bgcolor="#fff">' . $post['purveyor_Bio'] . '</td></tr>
+<tr><td bgcolor="#ebebeb">Customers Serve: </td><td bgcolor="#f6f6f6">' . $post['purveyor_Customers'] . '</td></tr>
+<tr><td bgcolor="#f8f8f8">Hear About Us: </td><td bgcolor="#fff">' . $post['purveyor_Aboutus'] . '</td></tr>
+<tr><td bgcolor="#ebebeb">Address: </td><td bgcolor="#f6f6f6">' . $post['purveyor_Address'] . '</td></tr>
+<tr><td bgcolor="#f8f8f8">City: </td><td bgcolor="#fff">' . $post['purveyor_City'] . '</td></tr>
+<tr><td bgcolor="#ebebeb">Zipcode: </td><td bgcolor="#f6f6f6">' . $post['purveyor_Zipcode'] . '</td></tr>
+<tr><td bgcolor="#f8f8f8">Social Links: </td><td bgcolor="#fff">' . $post['purveyor_Social'] . '</td></tr>
 </table></td></tr></table> </td></tr>
 <tr> <td align="center" valign="top"> <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#F4F4F4; border-top:1px solid #FFFFFF;"><tr><td valign="top" style="text-align:center; color:grey;font-family:Helvetica;font-size:10px;line-height:150%;padding:20px" mc:edit="footer_content01"><em>Copyright &copy; 2016 Caper, All rights reserved.</em></td></tr>
 </table> </td></tr></table> </td></tr></table>';
@@ -33,21 +41,21 @@ if (isset($post['contact_name']) && $post['contact_email'] && isset($post['conta
     $mail->isSMTP();
 
     //For loaclhost
-     /* $mail->SMTPAuth = true;
+   /* $mail->SMTPAuth = true;
     $mail->SMTPSecure = 'ssl';
     $mail->Host = 'smtp.googlemail.com';
     $mail->Port = 465;
     $mail->Username = "tu06510@gmail.com";  // GMAIL username
     $mail->Password = "prabhukiran510"; */
 
-    $mail->SetFrom($post['contact_email'], $post['contact_name']);
-    $mail->AddAddress('loganathan.p@indiapistons.com'); //
-    $mail->Subject = "Caper - Contact Enquiry";
+    $mail->SetFrom($post['purveyor_Email'], $post['purveyor_Fname']);
+    $mail->AddAddress('purveyors@caper.ly'); //
+    $mail->Subject = "Caper - Purveyor Enquiry";
     $mail->MsgHTML($message);
     $mail->Send();
     /* if(!$mail->Send())
       echo $mail->ErrorInfo;
       else */
-    echo "Thanks for contacting Caper!<br/> We'll get back to you as soon as we can.";
+    echo "Thank you again for your application! <br/>We look forward to reviewing it and will get back to you soon.";
 }
 ?>

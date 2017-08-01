@@ -1,4 +1,4 @@
-(function ($) {
+/*(function ($) {
 
     "use strict";
 
@@ -7,7 +7,7 @@
     /* =================================
     ===  CONTACT FORM               ====
     =================================== */
-    $("#contact").submit(function (e) {
+   /* $("#contact").submit(function (e) {
         e.preventDefault();
         var name = $("#form-name").val();
         var email = $("#form-email").val();
@@ -25,7 +25,7 @@
         if (validEmail(email) && (message.length > 1) && (name.length > 1)) {
             $.ajax({
                 type: "POST",
-                url: "send-mail.php",
+                url: "contact.php",
                 data: dataString,
                 success: function () {
                     $('.successContent').fadeIn(1000);
@@ -43,6 +43,7 @@
 
 
   
-})(jQuery);
+})(jQuery); */
+
 
 

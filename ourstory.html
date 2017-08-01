@@ -81,14 +81,11 @@
         <!-- CONTENT --------------------------------------------------------------------------------->
 
         <!-- Intro Section -->
-        <section class="inner-intro about-bg overlay-dark80 parallax parallax-background2">
+        <section class="inner-intro about-bg overlay-dark80">
             <div class="container">
                 <div class="row title">
-					<h1 class="light-color">It all started a simple idea</h1>
-                     <!--  <h1 class="light-color">About Us</h1>
-                    <div class="page-breadcrumb mt-30">
-                        <a>Home</a>/<span>About</span>
-                    </div>-->
+					<h2 class="light-color">It all started with</h2>
+					<h1 class="light-color">A SIMPLE IDEA</h1>
                 </div>
             </div>
         </section>
@@ -101,15 +98,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
-                        <h3 class="boldL pb-15">That all chefs should have a platform to share their story.</h3>
-						<p>Sandesh Reddy, a food-loving engineer turned self-taught chef, always had a love for learning and food. Constantly experimenting with flavors common and obscure led to many messy countertops, but ultimately led to his empire of popular restaurant concepts in Chennai (he was the first to successfully introduce ramen there). </p>
-						<p>His understanding of food cultures and reinterpretation of them with local ingredients drew a crowd whose enjoyment of his signature dishes were enhanced by his story. They were more open to trying new foods and enjoyed the experience he offered them. In essence, he created his own platform to share his passion which helped grow his following and further fueled his love of food.</p>
-						<p>It dawned upon him that many food purveyors may not have opportunities to share their own culinary inspirations with their eaters. He also realized many eaters were more open to trying new dishes when they craved specific flavors in that dish.</p>
-                        <p>Putting his engineering and epicurean thinking caps together, he sought a solution. Purveyors should be able to tell their story and grow a dedicated following. Users should be able to eat amazing dishes they’re in the mood for.</p>
-						<p>And like all good startup stories, Caper was born.</p>
+                        <h3 class="boldL pb-15">Passionate chefs should have a platform to share their stories.</h3>
+						<p>It began with a few food lovers, weary from late deliveries, overpriced portions, and a sea of underwhelming menu options. After realizing their best meals came from chefs with compelling (and often overlooked) food stories, they embarked on a journey to find an easier way to discover and eat new, exciting food.</p>
+                        <p>And so, Caper was born.</p>
+                        <p>Caper revolutionizes dish discovery to find food you’re in the mood for. We believe quality meals in NYC should be easy to find, affordable, and a short walk away. We also love small, local businesses and want them to succeed. Through Caper, diners can quickly find delicious eats that satisfy their most adventurous cravings and build traction for these restaurants. Purveyors* can now share the full richness of their craft while growing a community of diners. It’s a win-win.</p>
+                        <p style="font-size:12px;">*Caper purveyors are locally-owned restaurants with a compelling story, memorable meals, and quality ingredients</p>
                     </div>
 					<div class="col-md-4">
-						<img src="img/join_us.jpg" />
+						<img style="max-width: 300px; display:block; margin-left: auto; margin-right: auto;"src="img/ourstory.jpg" />
 					</div>
                 </div>
 
@@ -117,13 +113,13 @@
         </section>
 		<div class="clear"></div>
 		<hr/>
-		<section id="getcaper" class="overlay-dark80 light-color ptb-80 ptb-xs-45" style="background-image: url('img/craving-bg.jpg'); background-position: 0% 500px;" data-stellar-background-ratio="0.5">
+		<section id="getcaper" class="overlay-dark80 light-color ptb-80 ptb-xs-45">
             <div class="container text-center wow fadeInDown">
                 <div class="row">
 					<div class="col-md-3 col-sm-3"></div>
                     <div class="col-md-6 col-sm-6">
 					<h2 class="boldL pb-30">Get Caper!</h2>
-                        <a href="https://itunes.apple.com/in/app/caper-eat-something-new/id1045377845?mt=8" target="_blank" class="signupbtn"><i class="fa fa-apple"></i>
+                        <a href="#" target="_blank" class="signupbtn" data-toggle="modal" data-target="#ios"><i class="fa fa-apple"></i>
                         <span class="" >iOS</span></a>
 						<div class="signupbtnbreak"></div>
 						<a href="#" target="_blank" class="signupbtn" data-toggle="modal" data-target="#android"><i class="fa fa-android"></i>
@@ -142,43 +138,84 @@
 			  <div class="modal-body dark-color text-center">
 				<h2>Coming Soon! </h2>
 				<h3>We can let you know when it’s ready</h3>
+				<form name="notify_form" id="notify_form" method="post" action="">
+				<input type="hidden" name="u" value="35dd9f3e32ee8318f5de4ca7d">
+				<input type="hidden" name="id" value="16948b211e">
+				<input type="hidden" name="b_35dd9f3e32ee8318f5de4ca7d_16948b211e" tabindex="-1" value="">
 				<div class="newsletter" style="margin:0px 25px;">
-					<form>
-						<input type="email" class="newsletter-input input-md newsletter-input mb-0" placeholder="Enter Your Email">
-						<button class="newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0"></i></button>
-					</form>
+					<input type="email" class="notifyme newsletter-input input-md newsletter-input mb-0" name="notify_Email" id="notify_Email" placeholder="Enter Your Email">
+					<span class="notifyme-btn newsletter-btn btn btn-xs btn-white fa fa-angle-right mr-0"></span>
 				</div>
-				<a class="btn btn-md btn-theme-line mtb-30">Sign Up</a>
+				<div class="col-sm-12" id="notify_Success"></div>
+				<!--<div class="text-center">
+					<img src="img/newsloader.gif" style="" class="notifyloader" />
+				</div>-->
+				<button class="btn-white btn btn-md btn-theme-line mtb-30" name="notify_Submit" id="notify_Submit">Notify Me</button>
+				</form>
 			  </div>
 			</div>
 		  </div>
 		</div>
+		<!-- IOs Modal Popup Starts -->
+		<div class="modal fade" id="ios" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+			  </div>
+			  <div class="modal-body dark-color text-center">
+				<h2>Get Caper</h2>
+                <a target="_blank" href="http://apple.co/28YM7N6"><img alt="Download on the App Store" style="margin-bottom: 20px;" src="img/appstore-badge.svg" /></a>
+				<h3>Or receive a one time text to download the app</h3>
+				<form name="ios_form" id="ios_form" method="post" action="">
+				<div class="newsletter" style="margin:0px 25px;">
+					<input type="text" class="notifyme newsletter-input input-md newsletter-input mb-0" name="ios_phone" id="ios_phone" placeholder="Your number: (646) 123-4567">
+					<span class="notifyme-btn newsletter-btn btn btn-xs btn-white fa fa-angle-right mr-0"></span>
+				</div>
+				<div class="col-sm-12" id="ios_Success"></div>
+				<!--<div class="text-center">
+					<img src="img/newsloader.gif" style="" class="notifyloader" />
+				</div>-->
+				<button class="btn-white btn btn-md btn-theme-line mtb-30" name="ios_Submit" id="ios_Submit">Send Me the App</button>
+				</form>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- IOs Modal Popup Ends -->
 		<section id="action-box" class="dark-bg ptb-60">
             <div class="container wow fadeInLeft">
                 <div class="row">
                     <div class="col-md-4 mb-sm-30">
-                        <h4 class="boldL promoh2">Stay tuned for promos and events</h4>
+                        <h4 class="boldL promoh2" style="line-height: 20px;">Subscribe to our newsletter for exclusive promos and free food!</h4>
                     </div>
 					<div class="col-md-8">
+						<form  name="newsletter_form" id="newsletter_form" method="post" action="">
+						<input type="hidden" name="u" value="35dd9f3e32ee8318f5de4ca7d">
+						<input type="hidden" name="id" value="2d00c28c1c">
+						<input type="hidden" name="b_35dd9f3e32ee8318f5de4ca7d_2d00c28c1c" tabindex="-1" value="">
 						<div class="col-sm-5  padding-10">
-							<div class="newsletter">
-                            <form>
-                                <input type="email" class="promoevent newsletter-input input-md newsletter-input mb-0" placeholder="Enter Your Email">
-                                <button class="promoevent newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0 text-white"></i></button>
-                            </form>
-                        </div>
+						   <div class="newsletter">
+							  <input type="email" class="promoevent newsletter-input input-md newsletter-input mb-0" name="newsletter_Email" placeholder="Enter Your Email">
+							  <span class="fa fa-angle-right mr-0 text-white promoevent newsletter-btn btn btn-xs btn-white"></span>
+							  <div class="errmessage"></div>
+                           </div>
 						</div>
 						<div class="col-sm-5  padding-10">
-							<div class="newsletter">
-                            <form>
-                                <input type="text" class="promoevent newsletter-input input-md newsletter-input mb-0" placeholder="Zipcode">
-                                <button class="promoevent newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0 text-white"></i></button>
-                            </form>
-                        </div>
+						   <div class="newsletter">
+							  <input type="text" class="promoevent newsletter-input input-md newsletter-input mb-0" name="newsletter_Zipcode" maxlength="5" placeholder="Zipcode">
+							  <span class="fa fa-angle-right mr-0 text-white promoevent newsletter-btn btn btn-xs btn-white"></span>
+							  <div class="errmessage"></div>
+                           </div>
 						</div>
 						<div class="col-sm-2 padding-10">
-							<a class="btn btn-md btn-white-line mb-0 mt-10 mt-xs-15">Sign Up</a>
+							<button class="btn btn-md btn-white-line mb-0 mt-10 mt-xs-15" name="newsletter_Submit" type="submit" value="">Sign Up</button>
 						</div>
+						<div class="col-sm-12" id="newsletter_success"></div>
+						<!--<div class="text-center">
+						<img src="img/newsloader.gif" style="" class="newsloader" />
+						</div>-->
+						</form>
 						<div class="clear"></div>
 					</div>
                 </div>
@@ -190,19 +227,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-5 mb-sm-30 wow fadeInRight">
-                                <img class="pt-30" src="img/join_us.jpg" alt="" />
+                                <img class="pt-30 pb-30" style="max-width: 90%;" src="img/join_us.jpg" alt="" />
                             </div>
                             <div class="col-sm-7 wow fadeInLeft pt-60 pt-sm-0 joinbox">
-                                <!--<h2 class="mt-45 padding-10 boldL" style="line-height:40px;">
-								Are you the boss of sauce? <br/>
-								A smoke and meat master?<br/> 
-								Can whip up meringues like no other? </h2>-->
-								<h2 class="mt-45 boldL">Are you the boss of sauce? </h2>
-								<h2 class="boldL">A smoke and meat master?</h2>
-								<h2 class="boldL">Can whip up meringues like no other?</h2>
+								<h1 class="mt-45" style="letter-spacing: 0; font-size: 35px; margin-bottom: 15px;">Are you the boss of sauce? </h1>
+								<h3>A smoke and meat master?</h3>
+								<h3>Can whip up meringues like no other?</h3>
                                 <div class="spacer-15"></div>
-                                
-                                <a class="btn btn-theme-line btn-banner" data-toggle="modal" data-target="#becomeapurveyor"  onmouseover="document.getElementById('purveyorbtn').src='img/chat-w.png'"  onmouseout="document.getElementById('purveyorbtn').src='img/chat-t.png'" ><img id="purveyorbtn" src="img/chat-t.png" style="margin-top: -4px; margin-right: 10px; width:16px; height:16px;" />Become a Purveyor</a>
+                                <a class="btn btn-theme-line btn-banner" href="becomeapurveyor.html" onmouseover="document.getElementById('purveyorbtn').src='img/chat-w.png'"  onmouseout="document.getElementById('purveyorbtn').src='img/chat-t.png'" ><img id="purveyorbtn" src="img/chat-t.png" style="margin-top: -4px; margin-right: 10px; width:16px; height:16px;" />Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -210,94 +242,6 @@
             </div>
         </section>
         <!-- Service -->
-		<!-- Become a purveyor Modal Popup Starts -->
-		<div class="modal fade" id="becomeapurveyor" tabindex="-1" role="dialog" aria-labelledby="becomeapurveyor">
-		  <div class="modal-dialog" role="document">
-			<div class="modal-content">
-			  <div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
-			  </div>
-			  <div class="modal-body dark-color">
-				<h2 class="text-center">Thank you for your interest in becoming a Caper purveyor!</h2>
-				<p class="titlecontent">We're excited to learn more about you. Fill out the application below and you could be one of the chosen purveyors that gets highlighted on Caper.</p>
-				<p class="titlecontent">If you're accepted as a Caper purveyor, your perks will include: guaranteed new customers, professional photos & videos, social media targeted marketing, being a part of community of people that share the same passions as you, and much, much more.</p>
-				<p class="titlecontent">To get started, please tell us a little bit about yourself.</p>
-				
-				<div class="newsletter" style="margin:0px 10px; padding-top:20px;">
-					<form name="purveyor_form" id="purveyor_form" method="post" action="">
-						<p class="pb-15 text-red" style="font-size:14px; font-weight:400"  ><span class="pr-5" style="font-size:18px; vertical-align:middle;">*</span>Required</p>
-						<div class="purveyor-input">
-						<p>First Name: <span class="text-red">*</span></p>
-						<input type="text" name="purveyor_Fname" class="newsletter-input input-md alpha_numeric" placeholder="Enter Your First Name">
-						<div class="errmessage"></div>
-						</div>
-						<div class="purveyor-input">
-						<p>Last Name: <span class="text-red">*</span></p>
-						<input type="text" name="purveyor_Lname" class="newsletter-input input-md alpha_numeric" placeholder="Enter Your Last Name">
-						<div class="errmessage"></div>
-						</div>
-						<div class="purveyor-input">
-						<p>Email Id: <span class="text-red">*</span></p>
-						<input type="email" name="purveyor_Email" class="newsletter-input input-md" placeholder="Enter Your Email Id">
-						</div>
-						<div class="purveyor-input">
-						<p>What is the name of your business?</p>
-						<input type="text" name="purveyor_Businessname" class="newsletter-input input-md" placeholder="Your Answer">
-						</div>
-						<div class="purveyor-input">
-						<p>What is your signature dish? <span class="text-red">*</span></p>
-						<input type="text" name="purveyor_Dish" class="newsletter-input input-md" placeholder="Your Answer">
-						</div>
-						<div class="purveyor-input">
-						<p>Brief bio: <span class="text-red">*</span><br/>
-							<span style="font-size:12px;">Tell us a little about yourself! Where are you from? What is your passion? What makes you unique?</span>
-						</p>
-						<textarea name="purveyor_Bio" id="purveyor_Bio" class="newsletter-input input-md" rows="1" placeholder="Your Answer"></textarea>
-						</div>
-						<div class="purveyor-input">
-						<p>How many customers do you serve per week? <span class="text-red">*</span></p>
-						<input type="text" name="purveyor_Customers" class="newsletter-input input-md" placeholder="Your Answer">
-						</div>
-						<div class="purveyor-input">
-						<p>How did you hear about us?</p>
-						<input type="text" name="purveyor_Aboutus" class="newsletter-input input-md" placeholder="Your Answer">
-						</div>
-						<div class="purveyor-input">
-						<p>Street Address <span class="text-red">*</span><br/>
-							<span style="font-size:12px;">Please enter your kitchen location. This is the address where you prepare your dishes.</span>
-						</p>
-						<input type="text" name="purveyor_Address" class="newsletter-input input-md" placeholder="Your Answer">
-						</div>
-						<div class="purveyor-input">
-						<p>City <span class="text-red">*</span></p>
-						<input type="text" name="purveyor_City" class="newsletter-input input-md  alpha_numeric" placeholder="Your Answer">
-						<div class="errmessage"></div>
-						</div>
-						<div class="purveyor-input">
-						<p>Zip Code <span class="text-red">*</span></p>
-						<input type="text" name="purveyor_Zipcode" class="newsletter-input input-md numeric" maxlength="10" placeholder="Your Answer">
-						<div class="errmessage"></div>
-						</div>
-						<div class="purveyor-input">
-						<p>Please feel free to share your social media links.<br/>
-							<span style="font-size:12px;">Facebook, Twitter, Instagram, Pinterest - we want to learn more about you!</span>
-						</p>
-						<textarea name="purveyor_Social" id="purveyor_Social" onKeydown="social_increase()" class="newsletter-input input-md" rows="1" placeholder="Your Answer"></textarea>
-						</div>
-						<div class="col-sm-12" id="conduct_success"></div>
-						<div class="text-center">
-						<img src="img/ajax-loader.gif" style="" class="loader" />
-						</div>
-						<div class="text-center">
-							<button name="Submit" type="submit" id="purveyor_submit" class="btn btn-md btn-theme-line mt-15" style="margin-bottom:35px;">Submit</button>
-						</div>
-					</form>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<!-- Become a purveyor Modal Popup Ends -->
         <hr />
 
          <!-- FOOTER -->
@@ -321,21 +265,27 @@
                     <div class="col-md-2 col-sm-3 col-xs-12 mb-sm-30 footer-margin">
                         <ul class="link">
                             <li><a href="careers.html">Careers</a></li>
-                            <li><a href="privacy&terms.html">Privacy & Terms </a></li>
-                            <li><a href="help&faq.html">Help & FAQ </a></li>
+                            <li><a href="privacyandterms.html">Privacy & Terms </a></li>
+                            <li><a href="http://support.caper.ly/">Help & FAQ </a></li>
                         </ul>
                     </div>
 					<div class="col-md-1 hidden-sm"></div>
                     <div class="col-md-2 col-sm-3 col-xs-12 footer-social footer-margin">
                         <ul class="link-small">
-                            <li><a href="#"><i class="fa fa-envelope-o left"></i>info@caper.ly</a></li>
+                            <li><a href="mailto:info@caper.ly?Subject=Hello%20Caper!" target="_blank" ><i class="fa fa-envelope-o left"></i>info@caper.ly</a></li>
+                            <!-- JC: For now, hide phone number from users
                             <li><a><i class="fa fa-phone left"></i>646-854-5338</a></li>
+                            -->
                         </ul>
 						<div class="clear spacer-10"></div>
 						<ul class="social">
                             <li><a target="_blank" href="http://www.facebook.com/caperapp"><i class="fa fa-facebook"></i></a></li>
-							<li><a target="_blank" href="http://caperapp.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
-							<li><a target="_blank" href="http://twitter.com/caperapp"><i class="fa fa-twitter"></i></a></li>
+                            <!-- JC: No tumblr at this time 
+                            <li><a target="_blank" href="http://caperapp.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
+                            -->
+                            <li><a target="_blank" href="http://twitter.com/caperapp"><i class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="https://instagram.com/caper_app"><i class="fa fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="http://apple.co/295Mo4u"><i class="fa fa-apple"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -394,6 +344,10 @@
 	
 <script>
 	$(document).ready(function () {
+	$(".modal").on("hidden.bs.modal", function(){
+		$("#ios_phone-error").html("");
+		$("#notify_Email-error").html("");
+	});
 	/*------Validation-------*/
 	$(function() {
 	   $('#purveyor_Bio').autogrow();
@@ -407,7 +361,6 @@
         if (regex.test(str) || e.charCode == "0") {
             $(this).parent("div").find(".errmessage").text('');
             return true;
-           
         }
 
         e.preventDefault();
@@ -458,57 +411,86 @@
       
     });
 		
-		/*-----------------------*/
-		$("#purveyor_form").validate({
+
+	$("#newsletter_form").validate({
 		rules: {
-			purveyor_Fname: "required",
-			purveyor_Lname: "required",
-			purveyor_Email: {
+			newsletter_Email: {
 				required: true,
 				email: true
 			},
-			purveyor_Dish: "required",
-			purveyor_Bio: "required",
-			purveyor_Customers: "required",
-			purveyor_Address: "required",
-			purveyor_City: "required",
-			purveyor_Zipcode: {
+			newsletter_Zipcode: {
 				required: true,
 				digits: true,
-				maxlength: 10
+				maxlength:10
 			},
 		},
-		messages: {
-			purveyor_Fname: "Please Enter Your Firstname",
-			purveyor_Lname: "Please Enter Your Lastname",
-			purveyor_Email: {
+		messages:{
+			newsletter_Email:{
 				required: "Please Enter Your Email",
 				email: "Please Enter Valid Email ID"
 			},
-			purveyor_Dish: "Please Enter Your Signature Dish",
-			purveyor_Bio: "Please Enter Your Bio",
-			purveyor_Customers:"Please Enter How Many Customers Do You Serve Per Week",
-			purveyor_Address: "Please Enter Your Address",
-			purveyor_City: "Please Enter Your City",
-			purveyor_Zipcode: "Please Enter Your Zipcode",
+			newsletter_Zipcode:{
+				required:"Please Enter Your Zipcode",
+				digits:"Please Enter Number Only"
+			},
 		},
-		submitHandler: function () {
-			$('#purveyor_submit').attr('disabled', true);
-			$('.loader').show();
-			$.post("contact.php", $("#purveyor_form").serialize())
-					.done(function (data) {
-						$('#purveyor_submit').attr('disabled', false);
-						$('.loader').hide();
-						$("#purveyor_form input[type='text'],#purveyor_form input[type='email'], #purveyor_form textarea").val('');
-						$('#conduct_success').html(data);
-						$('#conduct_success').addClass('msg-bg');
-						setTimeout(function () {
-							$('#conduct_success').html('').hide();
-						}, 10000);
-					});
-			return false;
+		submitHandler: function(){
+			$('#newsletter_Submit').attr('disabled', true);
+			data = $("#newsletter_form").serialize().replace('newsletter_Email', 'MERGE0').replace('newsletter_Zipcode', 'MERGE1');
+			location.href = "http://caper.us12.list-manage.com/subscribe/post?"+data;
 		}
 	});
+	$("#notify_form").validate({
+		rules: {
+			notify_Email: {
+				required: true,
+				email: true
+			},
+		},
+		messages:{
+			notify_Email:{
+				required: "Please Enter Your Email",
+				email: "Please Enter Valid Email ID"
+			},
+		},
+		submitHandler: function(){
+			$('#notify_Submit').attr('disabled', true);
+			$('.notifyloader').show();
+			data = $("#notify_form").serialize().replace('notify_Email', 'MERGE0');
+			location.href = "http://caper.us12.list-manage.com/subscribe/post?"+data;
+		}
+	});
+	$("#ios_form").validate({
+			rules: {
+				ios_phone: {
+					required: true,
+					digits: true,
+					maxlength:10,
+					minlength:10,
+				},
+			},
+			messages:{
+				ios_phone:{
+					required: "Please Enter Your Phone Number",
+					digits:"Please Enter Number Only"
+				},
+			},
+			submitHandler: function(){
+				$('#ios_Submit').attr('disabled', true);
+				$('.notifyloader').show();
+				$.post("twilio.php", $("#ios_form").serialize())
+					.done(function (data){
+						$('#ios_Submit').attr('disabled', false);
+						$('.notifyloader').hide();
+						$("#ios_form input[type='text']").val('');
+						$('#ios_Success').html(data).addClass('msg-bg');
+						setTimeout(function () {
+						$('#ios_Success').html('').removeClass('msg-bg');;
+						 }, 15000);
+					});
+				return false;
+			}
+		});
 	});
 	</script>
 </body>

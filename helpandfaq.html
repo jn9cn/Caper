@@ -32,9 +32,7 @@
 		  ga('create', 'UA-68580083-1', 'auto');
 		  ga('send', 'pageview');
 	</script>
-	
-<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","caper.zendesk.com");
-/*]]>*/</script>
+
 </head>
 
 <body class="full-intro">
@@ -84,10 +82,10 @@
         <!-- CONTENT --------------------------------------------------------------------------------->
 
         <!-- Intro Section -->
-        <section class="inner-intro about-bg overlay-dark80 parallax parallax-background2">
+        <section class="inner-intro about-bg overlay-dark80">
             <div class="container">
                 <div class="row title">
-                    <h1 class="light-color">Help & FAQ</h1>
+                    <h1 class="light-color">HELP & FAQ</h1>
                     <!-- <div class="page-breadcrumb mt-30">
                         <a>Home</a>/<span>Careers</span>
                     </div> -->
@@ -103,8 +101,8 @@
             <div class="container">
                 <div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
-                        <h3>Get In Touch</h3>
-                        <p class="lead">Our team is available to assist you with questions or issues you might have, so please feel free to email or call us. We’ll respond to you right away!</p>
+                        <h3 class="boldL">Get In Touch</h3>
+                        <p class="lead text-center" style="font-size:16px;">Our team is available to assist with any questions or issues you may have.</br>Please contact us via the form below or email.</p>
                     </div>
 					<div class="spacer-75 clear"></div>
 					<div class="col-md-5 contact">
@@ -112,14 +110,16 @@
                             <div class="contact-icon-left"><i class="ion ion-ios-location"></i></div>
                             <h6>Additional info</h6>
                             
-                            <a href="mailto:info@caper.ly"><i class="fa fa-envelope-o left pr-10"></i>info@caper.ly</a><br>
-                            <a><i class="fa fa-phone left  pr-10"></i>646-854-53389</a>
+                            <a href="mailto:info@caper.ly?Subject=Hello%20Caper!" target="_blank" ><i class="fa fa-envelope-o left pr-10"></i>info@caper.ly</a><br>
+                            <!-- JC: For now, hide phone number from users
+                            <a><i class="fa fa-phone left  pr-10"></i>646-854-53389</a> 
+                            -->
                         </div>
                         <div class="contact-box-left mb-45">
                             <div class="contact-icon-left"><i class="ion ion-ios-clock"></i></div>
                             <h6>Business Hours</h6>
                             <p>
-                                <span>Mon-Fri 10 am-6pm EST</span>
+                                <span>Mon-Fri 10 am-6 pm EST</span>
                                 <br>
                             </p>
                         </div>
@@ -128,48 +128,49 @@
                             <h6>Follow Us</h6>
                             <ul class="list-none social">
                                 <li><a target="_blank" href="http://www.facebook.com/caperapp"><i class="fa fa-facebook"></i></a></li>
-								<li><a target="_blank" href="http://caperapp.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
-								<li><a target="_blank" href="http://twitter.com/caperapp"><i class="fa fa-twitter"></i></a></li>
+                                <!-- JC: No tumblr at this time
+                                <li><a target="_blank" href="http://caperapp.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
+                                -->
+                                <li><a target="_blank" href="http://twitter.com/caperapp"><i class="fa fa-twitter"></i></a></li>
+                                <li><a target="_blank" href="https://instagram.com/caper_app"><i class="fa fa-instagram"></i></a></li>
+                                <li><a target="_blank" href="http://apple.co/295Mo4u"><i class="fa fa-apple"></i></a></li>
                             </ul>
                         </div>
-						<p class="boldL">You can also check our <A href="https://caper.zendesk.com/hc/en-us/" target="_blank" class="bold"> FAQs</a> to see if we’ve answered your question!</p>
+						<p class="boldL" style="font-size:16px;">Check our <a href="http://support.caper.ly/" target="_blank" class="bold"> FAQs</a> to see if we’ve answered your question!</p>
                     </div>
                     <div class="col-md-6 col-md-offset-1">
                         <!-- Contact FORM -->
-                        <form class="contact-form" id="contact" role="form" novalidate="novalidate">
-
-                            <!-- IF MAIL SENT SUCCESSFULLY -->
-                            <h6 class="successContent">
-                                <i class="fa fa-check left" style="color: #5cb45d;"></i>Your message has been sent successfully.
-                            </h6>
-                            <!-- END IF MAIL SENT SUCCESSFULLY -->
-
-                            <!-- MAIL SENDING UNSUCCESSFULL -->
-                            <h6 class="errorContent">
-                                <i class="fa fa-exclamation-circle left" style="color: #e1534f;"></i>There was a problem validating the form please check!
-                            </h6>
-                            <!-- END MAIL SENDING UNSUCCESSFULL -->
+                        <form class="contact_form" id="contact_form" name="contact_form" method="post" action="" enctype="multipart/form-data">
 
                             <div class="form-field-wrapper">
-                                <input class="input-sm form-full" id="form-name" type="text" name="form-name" placeholder="Your Name" required="" aria-required="true">
+                                <input class="input-sm form-full" id="contact_name" type="text" name="contact_name" placeholder="Your Name" required="" aria-required="true">
+								<div class="errmessage"></div>
                             </div>
 
                             <div class="form-field-wrapper">
-                                <input class="input-sm form-full" id="form-email" type="email" name="form-email" placeholder="Email" required="" aria-required="true">
+                                <input class="input-sm form-full" id="contact_email" type="email" name="contact_email" placeholder="Email" required="" aria-required="true">
+								<div class="errmessage"></div>
                             </div>
 
                             <div class="form-field-wrapper">
-                                <input class="input-sm form-full" id="form-subject" type="text" name="form-subject" placeholder="Subject">
+                                <input class="input-sm form-full" id="contact_subject" type="text" name="contact_subject" placeholder="Subject">
+								<div class="errmessage"></div>
                             </div>
 
                             <div class="form-field-wrapper">
-                                <textarea class="form-full" id="form-message" rows="7" name="form-message" placeholder="Your Message" required="" aria-required="true"></textarea>
+                                <textarea class="form-full" id="contact_message" rows="7" name="contact_message" placeholder="Your Message" required="" aria-required="true"></textarea>
+								<div class="errmessage"></div>
                             </div>
 							<div class="form-field-wrapper submitarequest">
-							<input type="file" class="form-control" />
-						</div>
-
-                            <button class="btn btn-theme-line form-full" type="submit" id="form-submit" name="submit">Send Message</button>
+							<input type="file" class="form-control" id="contact_file" name="contact_file" accept="image/jpg,image/png,application/pdf" />
+							<span style="font-size:12px; color:#666;"><b>Supported Files:</b> image(jpg & png) and documents(pdf)</span>
+							</div>
+							<div class="col-sm-12" id="contact_success"></div>
+							<div class="text-center" style="padding:10px">
+								<img src="img/newsloader.gif" style="" class="loader" />
+							</div>
+                            <button class="btn btn-theme-line form-full" type="submit" id="contact_submit" name="contact_submit">Send Message</button>
+							
                         </form>
                         <!-- END Contact FORM -->
                     </div>
@@ -203,21 +204,27 @@
                     <div class="col-md-2 col-sm-3 col-xs-12 mb-sm-30 footer-margin">
                         <ul class="link">
                             <li><a href="careers.html">Careers</a></li>
-                            <li><a href="privacy&terms.html">Privacy & Terms </a></li>
-                            <li><a href="help&faq.html">Help & FAQ </a></li>
+                            <li><a href="privacyandterms.html">Privacy & Terms </a></li>
+                            <li><a href="helpandfaq.html">Help & FAQ </a></li>
                         </ul>
                     </div>
 					<div class="col-md-1 hidden-sm"></div>
                     <div class="col-md-2 col-sm-3 col-xs-12 footer-social footer-margin">
                         <ul class="link-small">
-                            <li><a href="#"><i class="fa fa-envelope-o left"></i>info@caper.ly</a></li>
+                            <li><a href="mailto:info@caper.ly?Subject=Hello%20Caper!" target="_blank" ><i class="fa fa-envelope-o left"></i>info@caper.ly</a></li>
+                            <!-- JC: For now, hide phone number from users
                             <li><a><i class="fa fa-phone left"></i>646-854-5338</a></li>
+                            -->
                         </ul>
-						<div class="clear spacer-10"></div>
-						<ul class="social">
+                        <div class="clear spacer-10"></div>
+                        <ul class="social">
                             <li><a target="_blank" href="http://www.facebook.com/caperapp"><i class="fa fa-facebook"></i></a></li>
-							<li><a target="_blank" href="http://caperapp.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
-							<li><a target="_blank" href="http://twitter.com/caperapp"><i class="fa fa-twitter"></i></a></li>
+                            <!-- JC: No tumblr at this time 
+                            <li><a target="_blank" href="http://caperapp.tumblr.com/"><i class="fa fa-tumblr"></i></a></li>
+                            -->
+                            <li><a target="_blank" href="http://twitter.com/caperapp"><i class="fa fa-twitter"></i></a></li>
+                            <li><a target="_blank" href="https://instagram.com/caper_app"><i class="fa fa-instagram"></i></a></li>
+                            <li><a target="_blank" href="http://apple.co/295Mo4u"><i class="fa fa-apple"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -248,7 +255,6 @@
     </div>
     <!-- Site Wraper End -->
 
-
     <!-- JS -->
 
     <script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
@@ -272,7 +278,122 @@
     <script src="js/plugin/jquery.validate.min.js" type="text/javascript"></script>
     <script src="js/theme.js" type="text/javascript"></script>
     <script src="js/navigation.js" type="text/javascript"></script>
-	<script src="js/contact-form.js" type="text/javascript"></script>
+	<!--<script src="js/contact-form.js" type="text/javascript"></script>-->
+	
+	<script>
+	$(document).ready(function () {
+	
+		/*------Validation-------*/
+		
+	$('.alpha_numeric').keypress(function (e) {
+
+        var regex = new RegExp("^[a-zA-Z\\-\\s]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+       
+        if (regex.test(str) || e.charCode == "0") {
+            $(this).parent("div").find(".errmessage").text('');
+            return true;
+        }
+
+        e.preventDefault();
+        $(this).parent("div").find(".errmessage").text("Enter only text");
+        return false;
+       
+        
+        
+    });
+
+
+// for ony numeric
+    $(".numeric").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+            // Allow: Ctrl+A, Command+A
+            (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+            // Allow: home, end, left, right, down, up
+            (e.keyCode >= 35 && e.keyCode <= 40)) {
+            // let it happen, don't do anything
+          
+            return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            $(this).parent("div").find(".errmessage").text("Enter only number");
+            $(this).parent("td").find(".errmessage").text("Enter only number");
+            e.preventDefault();
+        }
+        else {
+            $(this).parent("div").find(".errmessage").text('');
+            $(this).parent("td").find(".errmessage").text('');
+
+        }
+        
+    });
+
+
+    $('.alpha_spacial').keypress(function (e) {
+
+        var regex = new RegExp("^[a-zA-Z0-9]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+        if (regex.test(str) || e.charCode == "0") {
+            return true;
+            $(this).parent("div").find(".errmessage").text('');
+        }
+
+       
+        $(this).parent("div").find(".errmessage").text('Enter only number & text');
+        return false;
+      
+    });
+	$("#contact_form").validate({
+		rules: {
+			contact_name: "required",
+			contact_email: {
+				required: true,
+				email: true
+			},
+			contact_subject: "required",
+			contact_message: "required",
+		},
+		messages: {
+			contact_name: "Please Enter Your Name",
+			contact_email: {
+				required: "Please Enter Your Email",
+				email: "Please Enter Valid Email ID"
+			},
+			contact_subject: "Please Enter Subject",
+			contact_message: "Please Enter Message",
+		},
+		submitHandler: function () {
+		    $('#contact_submit').attr('disabled', true);
+			$('.loader').show();
+			
+			file = new FormData(document.getElementById("contact_form"));
+			
+			$.ajax({
+				url: "zendesk.php",
+				processData: false,
+				contentType: false,
+				type: "POST",
+				data: file,
+				success: function (data) {
+						data = $.parseJSON(data);
+						msg = parseInt(data.request.id) ? "Thanks for contacting Caper!<br/> We'll get back to you as soon as we can." : "Sorry! We were unable to process your request. Please try again later."
+						$('#contact_submit').attr('disabled', false);
+						$('.loader').hide();
+						$("#contact_form input, #contact_form textarea").val('');
+						$('#contact_success').html(msg);
+						$('#contact_success').addClass('msg-bg');
+						setTimeout(function () {
+							$('#contact_success').html('').removeClass('msg-bg');
+						}, 10000);
+					}
+			});
+			return false;
+		}
+	});
+});	
+	</script>
 	
 </body>
 </html>
